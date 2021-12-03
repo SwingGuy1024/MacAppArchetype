@@ -7,6 +7,7 @@ This is a maven archetype to create a bundled stand-alone application for the Ma
 ### Before building
 1. You may need to go into `Info.plist` and change ${mainClass} to the fully qualified class name of the main class. This can be done by Maven with a script, but I don't know how to do that right now.
 2. Replace the empty `appIcon.icns` file with a real Icons file.
+3. You must use JDK 8 or 9. The app bundler doesn't work with later versions of the JDK.
 
 
 ### Building

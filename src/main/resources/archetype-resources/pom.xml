@@ -9,13 +9,16 @@
   <version>${version}</version>
   <packaging>jar</packaging>
   <url>https://neptunedreams.com</url>
+  
+  <name>App Name Here</name> <!--The name of the application that is visible to the users goes here.-->
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Even though these two properties aren't referenced anywhere else in this pom.xml file, they still determine the Java version-->
+    <!-- The version must be set to 8 or 9, or the maven package command will fail. -->
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
 
-    
-    <maven.compiler.source>12</maven.compiler.source>
-    <maven.compiler.target>12</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mainClass>${groupId}.${artifactId}.${name}</mainClass>
     <iconFile>appIcon.icns</iconFile>
   </properties>
@@ -51,7 +54,6 @@
         <version>2.5</version>
         <configuration>
           <systemPropertyVariables>
-            <derby.system.home>${user.home}/.skeleton}</derby.system.home>
             <buildDirectory>${project.build.directory}</buildDirectory>
           </systemPropertyVariables>
         </configuration>
