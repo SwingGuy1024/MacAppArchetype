@@ -6,7 +6,7 @@
 
   <groupId>com.neptunedreams.archetypes</groupId>
   <artifactId>mac-app-archetype</artifactId>
-  <version>1.0.0</version>
+  <version>1.0-SNAPSHOT</version>
   <name>Macintosh Application Archetype</name>
   <packaging>maven-archetype</packaging>
 

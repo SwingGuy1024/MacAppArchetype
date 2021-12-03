@@ -1,0 +1,34 @@
+# Mac Application Maven Archetype
+
+This is a maven archetype to create a bundled stand-alone application for the Macintosh.
+
+## Build
+
+Before building, you may need to go into `Info.plist` and change ${mainClass} to the fully qualified class name of the main class. This can be done by Maven with a script, but I don't know how to do that right now.
+
+To build do the following:
+
+    mvn clean install
+    mvn install archetype:update-local-catalog
+
+I'm not sure if the second line is necessary. Some people will say that the clean is not necessary, but when I removed a file, it didn't work correctly until I used `mvn clean` before building.
+
+According to this link: https://stackoverflow.com/questions/30672206/maven-can-not-find-my-custom-maven-archetype
+It says that on the Mac, `mvn install` does the same thing as `mvn install archetype:update-local-catalog`, but on Windows, an additional step is needed: `mvn archetype:crawl`.
+
+## Invoking
+
+To create a new project from this archive, use this command from the command prompt:
+
+    mvn archetype:generate \
+    -DarchetypeGroupId=com.neptunedreams.archetypes \
+    -DarchetypeArtifactId=mac-app-archetype \
+    -DarchetypeVersion=1.0-SNAPSHOT \
+    -DgroupId=<myGroupId> \
+    -DartifactId=<myArtifactId> \
+    -Dversion=<myVersion>
+
+Supply your own values for `<myGroupId>`, `<myArtifactId>`, and `<myVersion>`.
+
+
+ 
