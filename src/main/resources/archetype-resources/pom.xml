@@ -126,7 +126,7 @@
         <version>1.2.0</version>
         <configuration>
           <!--Put your custom Info.plist and Icon.icns under your maven resource paths (src/main/resources on default configuration).-->
-          <mainClass>com.neptunedreams.skeleton.Skeleton</mainClass>
+          <mainClass>${mainClass}</mainClass>
           <!--<dictionaryFile>YourCustomInfo.plist</dictionaryFile>-->
           <iconFile>${iconFile}</iconFile>
           <!-- Put this line in to bundle the jdk with the app. -->
