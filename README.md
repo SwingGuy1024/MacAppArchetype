@@ -35,8 +35,6 @@ To create a new project from this archive, use this command from the command pro
 
 Supply your own values for `<myGroupId>`, `<myArtifactId>`, and `<myVersion>`.
 
-You may also do this from the IntelliJ IDE, but the "Add ArchtypeÉ" button doesn't work. Instead, check the "Use Archetype" checkbox without selecting an archetype. The last step will pop up an editable table which lets you set the same values as the command above.
-
 ## Notes
 1. This archetype was created using the instructions at https://maven.apache.org/guides/mini/guide-creating-archetypes.html
 ### Build Bug
