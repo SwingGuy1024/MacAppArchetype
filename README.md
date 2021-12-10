@@ -35,7 +35,7 @@ To create a new project from this archive, use this command from the command pro
 
 Supply your own values for `<myGroupId>`, `<myArtifactId>`, and `<myVersion>`.
 
-You may also do this from the IntelliJ IDE, but the "Add Archtype…" button doesn't work. Instead, check the "Use Archetype" checkbox without selecting an archetype. The last step will pop up an editable table which lets you set the same values as the command above.
+You may also do this from the IntelliJ IDE, but the "Add Archtype√â" button doesn't work. Instead, check the "Use Archetype" checkbox without selecting an archetype. The last step will pop up an editable table which lets you set the same values as the command above.
 
 ## Notes
 1. This archetype was created using the instructions at https://maven.apache.org/guides/mini/guide-creating-archetypes.html
@@ -62,6 +62,6 @@ Building using the `-e` option: `mvn -e clean install` and you see this in the s
 It looks like it's trying to get the java version as a floating point number, and it looks like this call is made by the bundler code, so this may be easy to fix. It may be as simple as upgrading to a more recent version of `org.apache.commons.lang.SystemUtils`.
 
 ## To Do
-Look at the source for the bundler maven plugin to see if I can make it work for later versions. It may be as simple as using a more recent version of 
+Change the bundler from the out-of-date one that I'm currently using to the one at https://github.com/perdian/macosappbundler-maven-plugin. The new one is based on the one I'm using, but is more current.
 
  
