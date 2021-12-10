@@ -27,7 +27,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
 
@@ -121,11 +121,13 @@
       </plugin>
 
       <!--This one will bundle everything into a Mac Application bundle.-->
+      <!--To do: Consider replacing this with https://github.com/perdian/macosappbundler-maven-plugin-->
+      <!--That bundler supports later versions of the OS, and probably has other improvements, too-->
       <plugin>
         <!-- https://github.com/federkasten/appbundle-maven-plugin -->
         <groupId>sh.tak.appbundler</groupId>
         <artifactId>appbundle-maven-plugin</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.1-SNAPSHOT</version>
         <configuration>
           <!--Put your custom Info.plist and Icon.icns under your maven resource paths (src/main/resources on default configuration).-->
           <mainClass>${mainClass}</mainClass>
